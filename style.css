@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s ease-in-out;
+}
+
+:root {
+  --bg-color: #f7f7f7;
+  --text-color: #000;
+  --box-color: #fff;
+  --btn-color: #007bff;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --box-color: #1e1e1e;
+  --btn-color: #3e8ef7;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+.scan-btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.scan-btn:hover {
+  background: #0056b3;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.result {
+  background: var(--box-color);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.blocked {
+  color: red;
+  font-weight: bold;
+}
+
+.safe {
+  color: green;
+  font-weight: bold;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

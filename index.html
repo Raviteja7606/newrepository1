@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DataVault - Sensitive Info Detector</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2><i class="fas fa-shield-alt"></i> DataVault Scanner</h2>
+      <button class="toggle-btn" onclick="toggleTheme()">🌓</button>
+    </div>
+
+    <textarea id="inputText" placeholder="Paste text here..."></textarea><br>
+    <input type="file" id="pdfInput" accept="application/pdf" />
+    <br>
+    <button class="scan-btn" onclick="scanInput()">
+      <i class="fas fa-search"></i> Scan
+    </button>
+
+    <div class="loader" id="loader" style="display:none;"></div>
+
+    <div class="result" id="resultBox" style="display:none;">
+      <h3>Scan Results</h3>
+      <p id="risk"></p>
+      <ul id="detections"></ul>
+      <p id="status"></p>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
